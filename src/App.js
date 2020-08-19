@@ -1,24 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Profile from './profile/profile';
+import tomas from "./profile/tomas.jpg";
 
 function App() {
+  const moi={fname: "tomas", bio : "nothing", profesion: "no"}
+  const handelname=(name)=>{alert(name)}
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={{textAlign:"center", color:"red"}}>
+      <Profile>
+     <img src={tomas} alt="T.cheleby"/>
+     
+    </Profile>
+    {/* <Profile fullName={moi.fname} bio={moi.bio} profession={moi.profesion} myfunc={handelname}>
+     <img src={tomas} alt="T.cheleby"/>
+     
+    </Profile> */}
     </div>
   );
 }
